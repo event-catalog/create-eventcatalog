@@ -16,7 +16,9 @@
     "prepublishOnly": "npm run build",
     "build": "tsup index.ts --format cjs --dts",
     "run": "node dist/index.js",
-    "dev": "npm run build --watch"
+    "dev": "npm run build --watch",
+    "changeset": "changeset",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@types/async-retry": "1.4.2",
