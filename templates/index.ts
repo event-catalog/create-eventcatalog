@@ -34,7 +34,7 @@ export const installTemplate = async ({
   console.log(chalk.bold(`Using ${packageManager}.`));
 
   /**
-   * Create a package.json for the new project.
+   * Create a package.json for the new project
    */
   const packageJson = {
     name: appName,
