@@ -34,14 +34,17 @@
     "commander": "2.20.0",
     "cpy": "^11.0.0",
     "cross-spawn": "6.0.5",
+    "fast-glob": "^3.3.2",
     "got": "^14.0.0",
     "prompts": "2.1.0",
+    "rimraf": "^5.0.7",
     "tar": "^4.4.19",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5",
     "update-check": "1.5.4",
-    "validate-npm-package-name": "3.0.0",
-    "fast-glob": "^3.3.2",
-    "rimraf": "^5.0.7"
+    "validate-npm-package-name": "3.0.0"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.6"
   }
 }
