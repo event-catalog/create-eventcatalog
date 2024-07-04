@@ -14,8 +14,29 @@ badges:
     - content: Recently updated!
       backgroundColor: green
       textColor: green
+schemaPath: "schema.json"
 ---
 
 ## Overview
 
-The `Inventory Adjusted` event is triggered whenever there is a change in the inventory levels of a product. This could occur due to various reasons such as receiving new stock, sales, returns, or manual adjustments by the inventory management team. The event ensures that all parts of the system that rely on inventory data are kept up-to-date with the latest inventory levels.
+The UpdateInventory command is issued to update the existing stock levels of a product in the inventory. This command is used by the inventory management system to adjust the quantity of products available in the warehouse or store, either by increasing or decreasing the current stock levels.
+
+## Architecture diagram
+
+<NodeGraph />
+
+## Payload example
+
+```json title="Payload example"
+{
+  "productId": "789e1234-b56c-78d9-e012-3456789fghij",
+  "quantityChange": -10,
+  "warehouseId": "456e7891-c23d-45f6-b78a-123456789abc",
+  "timestamp": "2024-07-04T14:48:00Z"
+}
+```
+
+## Schema (JSON schema)
+
+<Schema file="schema.json"/>
+

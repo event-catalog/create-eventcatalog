@@ -19,7 +19,7 @@ receives:
     version: 0.0.3
 sends:
   - id: InventoryAdjusted
-    version: 0.0.3
+    version: 0.0.4
   - id: OutOfStock
     version: 0.0.3
 repository:
@@ -27,8 +27,10 @@ repository:
   url: https://github.com/boyney123/pretend-shipping-service
 ---
 
-This is the inventory service, part of the core domain of the architecture.
+## Overview
 
-### EDA Architecture overview
+The Inventory Service is a critical component of the system responsible for managing product stock levels, tracking inventory movements, and ensuring product availability. It interacts with other services to maintain accurate inventory records and supports operations such as order fulfillment, restocking, and inventory audits.
+
+## Architecture diagram
 
 <NodeGraph title="Hello world" />

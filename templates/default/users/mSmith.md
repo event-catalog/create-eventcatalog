@@ -5,4 +5,4 @@ avatarUrl: "https://randomuser.me/api/portraits/men/51.jpg"
 role: Senior software engineer
 ---
 
-Thank you for showing me what I can do! This is what I own!
+As a Senior Mobile Developer on The Mobile Devs team, I play a key role in designing, developing, and maintaining our company’s mobile applications. My focus is on creating a seamless and intuitive user experience for our customers on both iOS and Android platforms. I work closely with cross-functional teams, including backend developers, UX/UI designers, and product managers, to deliver high-quality mobile solutions that meet business objectives and exceed user expectations.

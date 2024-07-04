@@ -18,14 +18,12 @@ repository:
 schemaPath: "openapi.yml"
 ---
 
+## Overview
+
+The Orders Service is responsible for managing customer orders within the system. It handles order creation, updating, status tracking, and interactions with other services such as Inventory, Payment, and Notification services to ensure smooth order processing and fulfillment.
+
 <OpenAPI />
 
-## Why this service was created?
-
-Event based service that allows you to create shipments, prepare them and dispatch them. This service handles the `Shipment` domain.
-
-## Who owns this service?
-
-This service will also generate Async events for downstream services.
+## Architecture diagram 
 
 <NodeGraph />

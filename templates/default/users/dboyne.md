@@ -7,7 +7,7 @@ email: test@test.com
 slackDirectMessageUrl: https://yourteam.slack.com/channels/boyney123
 ---
 
-Hello! I'm David Boyne, the Tech Lead of an amazing team called Full Stackers at [Enterprise Company]. With a passion for building robust and scalable systems, I specialize in designing and implementing event-driven architectures that power modern, responsive applications.
+Hello! I'm David Boyne, the Tech Lead of an amazing team called Full Stackers. With a passion for building robust and scalable systems, I specialize in designing and implementing event-driven architectures that power modern, responsive applications.
 
 ### About Me
 
@@ -29,4 +29,4 @@ Feel free to connect with me to discuss all things tech, event-driven architectu
 
 ---
 *David Boyne*
-*Tech Lead, Full Stackers at [Enterprise Company]*
+*Tech Lead, Full Stackers*

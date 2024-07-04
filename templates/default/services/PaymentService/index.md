@@ -1,22 +1,31 @@
 ---
 id: PaymentService
-version: 0.0.1
 name: Payment Service
+version: 0.0.1
 summary: |
   Service that handles payments
 owners:
     - dboyne
+receives:
+  - id: PaymentInitiated
+    version: 0.0.1
+sends:
+  - id: PaymentProcessed
+    version: 0.0.1
 repository:
   language: JavaScript
   url: https://github.com/boyney123/pretend-shipping-service
 ---
 
-# Why this service was created?
-
-Event based service that allows you to create shipments, prepare them and dispatch them. This service handles the `Shipment` domain.
-
-# Who owns this service?
-
-This service will also generate Async events for downstream services.
+The Payment Service is a crucial component of our system that handles all payment-related operations. It processes payments, manages transactions, and communicates with other services through events. Using an event-driven architecture, it ensures that all actions are asynchronous, decoupled, and scalable.
 
 <NodeGraph />
+
+### Key Components
+- Payment API: Exposes endpoints for initiating payments and querying payment status.
+- Payment Processor: Handles the core payment processing logic.
+- Event Bus: Manages the communication between services using events.
+- Payment Gateway: Interfaces with external payment providers.
+- Transaction Service: Manages transaction records and states.
+- Notification Service: Sends notifications related to payment status changes.
+- Database: Stores transaction data and payment status.

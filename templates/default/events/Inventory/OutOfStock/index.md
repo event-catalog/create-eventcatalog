@@ -23,13 +23,7 @@ badges:
 
 The `Inventory Adjusted` event is triggered whenever there is a change in the inventory levels of a product. This could occur due to various reasons such as receiving new stock, sales, returns, or manual adjustments by the inventory management team. The event ensures that all parts of the system that rely on inventory data are kept up-to-date with the latest inventory levels.
 
-## Event Details
-
-### Event Name
-`inventory.adjusted`
-
-### Description
-This event indicates that the inventory count for one or more products has been adjusted. The event carries the updated inventory details including the product ID, the new quantity, and the reason for the adjustment.
+<NodeGraph />
 
 ### Payload
 The payload of the `Inventory Adjusted` event includes the following fields:

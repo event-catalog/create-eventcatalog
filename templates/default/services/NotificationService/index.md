@@ -14,12 +14,23 @@ repository:
   url: https://github.com/boyney123/pretend-shipping-service
 ---
 
-# Why this service was created?
+## Overview
 
-Event based service that allows you to create shipments, prepare them and dispatch them. This service handles the `Shipment` domain.
+The Notification Service is responsible for managing and delivering notifications to users and other services. It supports various notification channels such as email, SMS, push notifications, and in-app notifications. The service ensures reliable and timely delivery of messages and integrates with other services to trigger notifications based on specific events.
 
-# Who owns this service?
-
-This service will also generate Async events for downstream services.
+## Architecture diagram
 
 <NodeGraph />
+
+## Core Concepts
+
+<AccordionGroup>
+  <Accordion title="Notification">
+    - Description: A message that is sent to a user or a service.
+    - Attributes: notificationId, type, recipient, content, channel, status, timestamp
+  </Accordion>
+  <Accordion title="Channel">
+    - Description: The medium through which the notification is delivered (e.g., email, SMS, push notification).
+    - Attributes: channelId, name, provider, configuration 
+  </Accordion>
+</AccordionGroup>
