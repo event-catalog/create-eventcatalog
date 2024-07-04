@@ -3,12 +3,11 @@
   "namespace" : "Tutorialspoint",
   "name" : "Employee",
   "fields" : [
-     { "name" : "Name" , "type" : "string" },
-     { "name" : "Age" , "type" : "int" },
-     { "name" : "Age" , "type" : "int" },
-     { "name" : "Age" , "type" : "int" },
-     { "name" : "Age" , "type" : "int" },
-     { "name" : "Age" , "type" : "int" },
-     { "name" : "Age" , "type" : "int" }
+     { "name" : "Name", "type" : "string" },
+     { "name" : "Age", "type" : "int" },
+     { "name" : "Department", "type" : "string" },
+     { "name" : "Position", "type" : "string" },
+     { "name" : "Salary", "type" : "double" },
+     { "name" : "JoinDate", "type" : "string", "logicalType": "date" }
   ]
 }

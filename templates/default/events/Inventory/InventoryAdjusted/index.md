@@ -24,32 +24,30 @@ schemaPath: 'schema.avro'
 
 The `Inventory Adjusted` event is triggered whenever there is a change in the inventory levels of a product. This could occur due to various reasons such as receiving new stock, sales, returns, or manual adjustments by the inventory management team. The event ensures that all parts of the system that rely on inventory data are kept up-to-date with the latest inventory levels.
 
+## Architecture diagram
+
 <NodeGraph />
 
-## Event Details
+## Payload example
 
-### Event Name
-`inventory.adjusted`
+Event example you my see being published.
 
-### Description
-This event indicates that the inventory count for one or more products has been adjusted. The event carries the updated inventory details including the product ID, the new quantity, and the reason for the adjustment.
-
-### Payload
-The payload of the `Inventory Adjusted` event includes the following fields:
-
-```json title="Example of payload" frame="terminal"
+```json title="Payload example"
 {
-  "event_id": "string",
-  "timestamp": "ISO 8601 date-time",
-  "product_id": "string",
-  "adjusted_quantity": "integer",
-  "new_quantity": "integer",
-  "adjustment_reason": "string",
-  "adjusted_by": "string"
+  "Name": "John Doe",
+  "Age": 30,
+  "Department": "Engineering",
+  "Position": "Software Engineer",
+  "Salary": 85000.50,
+  "JoinDate": "2024-01-15"
 }
 ```
 
-### Producing the Event
+## Schema (avro)
+
+<Schema file="schema.avro" title="Inventory Adjusted Schema (avro)" />
+
+## Producing the Event
 
 To produce an Inventory Adjusted event, use the following example Kafka producer configuration in Python:
 
