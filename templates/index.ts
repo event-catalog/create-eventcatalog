@@ -48,7 +48,7 @@ export const installTemplate = async ({
       test: 'echo "Error: no test specified" && exit 1',
     },
     dependencies: {
-      "@eventcatalogtest/core-test": "latest"
+      "@eventcatalog/core": "latest"
     }
   };
   /**
