@@ -41,10 +41,10 @@ export const installTemplate = async ({
     version: "0.1.0",
     private: true,
     scripts: {
-      start: "eventcatalog start",
       dev: "eventcatalog dev",
       build: "eventcatalog build",
-      generate: "eventcatalog generate",
+      start: "eventcatalog start",
+      preview: "eventcatalog preview",
       test: 'echo "Error: no test specified" && exit 1',
     },
     dependencies: {
