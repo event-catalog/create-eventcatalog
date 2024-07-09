@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.3
+
+### Patch Changes
+
+- 84b76b4: feat(cli): added types to all config files that are created
+
 ## 2.0.2
 
 ### Patch Changes
