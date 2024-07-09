@@ -1,3 +1,4 @@
+/** @type {import('@eventcatalog/core/bin/eventcatalog.config').Config} */
 export default {
   title: 'EventCatalog',
   trailingSlash: false,
