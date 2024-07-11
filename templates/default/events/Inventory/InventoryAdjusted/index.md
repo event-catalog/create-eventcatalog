@@ -28,6 +28,8 @@ The `Inventory Adjusted` event is triggered whenever there is a change in the in
 
 <NodeGraph />
 
+<SchemaViewer file="schema.json" title="JSON Schema" maxHeight="500" />
+
 ## Payload example
 
 Event example you my see being published.
