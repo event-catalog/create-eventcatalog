@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.4
+
+### Patch Changes
+
+- be82704: feat(cli): adding SchemaViewer component to default catalog on install.
+
 ## 2.0.3
 
 ### Patch Changes
