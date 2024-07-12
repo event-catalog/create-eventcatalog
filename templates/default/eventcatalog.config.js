@@ -13,7 +13,7 @@ export default {
   // Customize the logo, add your logo to public/ folder
   logo: {
     alt: 'EventCatalog Logo',
-    src: 'logo.png',
+    src: '/logo.png',
     text: 'EventCatalog'
   },
   docs: {
