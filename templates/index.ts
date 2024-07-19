@@ -45,6 +45,7 @@ export const installTemplate = async ({
       build: "eventcatalog build",
       start: "eventcatalog start",
       preview: "eventcatalog preview",
+      generate: "eventcatalog generate",
       test: 'echo "Error: no test specified" && exit 1',
     },
     dependencies: {
