@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 2.0.5
+
+### Patch Changes
+
+- ad0c7b2: feat(cli): added generators
+- e2e89a5: fix(cli): small fix to config file
+
 ## 2.0.4
 
 ### Patch Changes
