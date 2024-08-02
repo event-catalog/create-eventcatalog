@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 2.0.6
+
+### Patch Changes
+
+- f607f82: fix(cli): adding cross-env to devDeps
+- c5a5117: feat(core):added ability to customize the landing page
+
 ## 2.0.5
 
 ### Patch Changes
