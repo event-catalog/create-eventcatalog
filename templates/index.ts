@@ -74,6 +74,7 @@ export const installTemplate = async ({
   const devDependencies = [
     "@parcel/watcher",
     "concurrently",
+    "cross-env",
   ] as any;
 
   /**
