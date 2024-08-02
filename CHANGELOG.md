@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.7
+
+### Patch Changes
+
+- 64c8b0f: feat(cli): added changelog examples to default template
+
 ## 2.0.6
 
 ### Patch Changes
