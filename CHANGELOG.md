@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.10
+
+### Patch Changes
+
+- 1c7e0db: fix(cli): fixed docker template for default example
+
 ## 2.0.9
 
 ### Patch Changes
