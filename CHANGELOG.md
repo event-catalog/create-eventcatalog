@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.9
+
+### Patch Changes
+
+- 6e392ce: fix(cli): adding missing types
+
 ## 2.0.8
 
 ### Patch Changes
