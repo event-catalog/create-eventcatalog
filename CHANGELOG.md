@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.8
+
+### Patch Changes
+
+- 27cd83e: feat(cli): adding flows to default example
+
 ## 2.0.7
 
 ### Patch Changes
