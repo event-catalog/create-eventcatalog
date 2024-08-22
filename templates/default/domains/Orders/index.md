@@ -46,4 +46,11 @@ sequenceDiagram
     OrdersService->>InventoryService: Update Inventory
 ```
 
+## Flows
+
+### Cancel Subscription flow
+Documented flow when a user cancels their subscription.
+
+<Flow id="CancelSubscription" version="latest" includeKey={false} />
+
  

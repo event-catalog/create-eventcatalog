@@ -22,3 +22,8 @@ The Payment Domain encompasses all services and components related to handling f
 ## Bounded context
 
 <NodeGraph />
+
+### Payment processing flow
+Documented flow when a user makes a payment within the order domain
+
+<Flow id="PaymentFlow" version="latest" includeKey={false} />
