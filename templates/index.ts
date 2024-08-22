@@ -75,6 +75,7 @@ export const installTemplate = async ({
     "@parcel/watcher",
     "concurrently",
     "cross-env",
+    "@types/lodash.merge",
   ] as any;
 
   /**
