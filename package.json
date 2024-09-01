@@ -1,7 +1,7 @@
 {
   "name": "@eventcatalog/create-eventcatalog",
   "description": "Create EventCatalog with one command",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "bin": {
     "create-catalog": "./dist/index.js"
   },
