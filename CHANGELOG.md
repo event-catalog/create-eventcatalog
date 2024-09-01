@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.11
+
+### Patch Changes
+
+- c538ec7: fix(cli): fixed incorrect example version of inventory service
+
 ## 2.0.10
 
 ### Patch Changes
