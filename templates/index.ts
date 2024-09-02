@@ -1,10 +1,10 @@
 import { copy } from "../helpers/copy";
 import { install } from "../helpers/install";
 
-import os from "os";
-import fs from "fs";
-import path from "path";
 import chalk from "chalk";
+import fs from "fs";
+import os from "os";
+import path from "path";
 
 import { GetTemplateFileArgs, InstallTemplateArgs } from "./types";
 
@@ -76,6 +76,8 @@ export const installTemplate = async ({
     "concurrently",
     "cross-env",
     "@types/lodash.merge",
+    "@stoplight/markdown-viewer",
+    "@stoplight/mosaic-code-viewer",
   ] as any;
 
   /**
