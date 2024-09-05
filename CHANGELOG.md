@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.12
+
+### Patch Changes
+
+- 4280606: Fix small spelling error
+
 ## 2.0.11
 
 ### Patch Changes
