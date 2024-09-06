@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.13
+
+### Patch Changes
+
+- 3d5af84: chore(cli): removed the OpenAPI MDX component
+
 ## 2.0.12
 
 ### Patch Changes
