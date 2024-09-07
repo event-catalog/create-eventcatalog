@@ -1,13 +1,16 @@
 import axios from 'axios';
+import os from 'os';
+import pkg from '../package.json';
 
 interface EventMetadata {
   command: string;
   org: string;
-  id: string;
+  cId: string;
 }
 
 async function raiseEvent(eventData: EventMetadata): Promise<void> {
   const url = "https://queue.simpleanalyticscdn.com/events";
+  const userAgent = `@eventcatalog/create-eventcatalog/${pkg.version} (${os.platform()}; ${os.arch()}; Node/${process.version})`;
   const headers = {
     "Content-Type": "application/json",
   };
@@ -16,15 +19,17 @@ async function raiseEvent(eventData: EventMetadata): Promise<void> {
     type: "event",
     hostname: "eventcatalog.dev",
     event: "@eventcatalog/create-eventcatalog",
-    metadata: eventData,
-    timestamp: new Date().toISOString(),
+    metadata: {
+      ...eventData,
+      ua: userAgent
+    },
+    ua: userAgent
   };
 
   try {
     await axios.post(url, payload, { headers });
-    console.log("Event successfully sent");
   } catch (error) {
-    console.log("Error sending event:", error);
+    // swallow the error
   }
 }
 
