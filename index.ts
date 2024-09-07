@@ -12,6 +12,7 @@ import packageJson from "./package.json";
 import ciInfo from "ci-info";
 
 let projectPath: string = "";
+let organizationName: string = "";
 
 const program = new Commander.Command(packageJson.name)
   .version(packageJson.version)
@@ -114,7 +115,7 @@ async function run(): Promise<void> {
       projectPath = res.path.trim();
     }
   }
-
+  
   if (!projectPath) {
     console.log(
       "\nPlease specify the project directory:\n" +
@@ -128,6 +129,19 @@ async function run(): Promise<void> {
         `Run ${chalk.cyan(`${program.name()} --help`)} to see all options.`,
     );
     process.exit(1);
+  }
+
+  if (!organizationName) {
+    const res = await prompts({
+      type: "text",
+      name: "organizationName",
+      message: "What is your organization name?",
+      initial: "EventCatalog Ltd"
+    });
+
+    if (typeof res.organizationName === "string") {
+      organizationName = res.organizationName.trim();
+    }
   }
 
   const resolvedProjectPath = path.resolve(projectPath);
@@ -163,6 +177,7 @@ async function run(): Promise<void> {
       typescript: true,
       eslint: true,
       experimentalApp: false,
+      organizationName: organizationName
     });
   } catch (reason) {
     if (!(reason instanceof DownloadError)) {
@@ -186,6 +201,7 @@ async function run(): Promise<void> {
       packageManager,
       typescript: program.typescript,
       eslint: program.eslint,
+      organizationName: organizationName,
       experimentalApp: program.experimentalApp,
     });
   }

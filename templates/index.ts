@@ -5,8 +5,10 @@ import os from "os";
 import fs from "fs";
 import path from "path";
 import chalk from "chalk";
+import { v4 } from 'uuid'
 
 import { GetTemplateFileArgs, InstallTemplateArgs } from "./types";
+import { raiseEvent } from "./analytics";
 
 /**
  * Get the file path for a given file in a template, e.g. "next.config.js".
@@ -30,6 +32,7 @@ export const installTemplate = async ({
   template,
   mode,
   eslint,
+  organizationName
 }: InstallTemplateArgs) => {
   console.log(chalk.bold(`Using ${packageManager}.`));
 
@@ -130,6 +133,15 @@ export const installTemplate = async ({
       }
     },
   });
+
+  // update the properties in the eventcatalog.config.js
+  const eventCatalogConfigPath = path.join(root, "eventcatalog.config.js");
+  let eventCatalogConfig = fs.readFileSync(eventCatalogConfigPath, "utf8");
+  eventCatalogConfig = eventCatalogConfig.replace( /<organizationName>/g, organizationName );
+  eventCatalogConfig = eventCatalogConfig.replace( /<cId>/g, v4() );
+  fs.writeFileSync(eventCatalogConfigPath, eventCatalogConfig);
+
+  await raiseEvent({ command: 'create', org: organizationName, id: v4() });
 
   if (!eslint) {
     // remove un-necessary template file if eslint is not desired
