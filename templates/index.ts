@@ -134,14 +134,16 @@ export const installTemplate = async ({
     },
   });
 
+  const cId = v4();
+
   // update the properties in the eventcatalog.config.js
   const eventCatalogConfigPath = path.join(root, "eventcatalog.config.js");
   let eventCatalogConfig = fs.readFileSync(eventCatalogConfigPath, "utf8");
   eventCatalogConfig = eventCatalogConfig.replace( /<organizationName>/g, organizationName );
-  eventCatalogConfig = eventCatalogConfig.replace( /<cId>/g, v4() );
+  eventCatalogConfig = eventCatalogConfig.replace( /<cId>/g, cId );
   fs.writeFileSync(eventCatalogConfigPath, eventCatalogConfig);
 
-  await raiseEvent({ command: 'create', org: organizationName, id: v4() });
+  await raiseEvent({ command: 'create', org: organizationName, cId });
 
   if (!eslint) {
     // remove un-necessary template file if eslint is not desired
