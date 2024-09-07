@@ -17,6 +17,7 @@ async function raiseEvent(eventData: EventMetadata): Promise<void> {
     hostname: "eventcatalog.dev",
     event: "@eventcatalog/create-eventcatalog",
     metadata: eventData,
+    timestamp: new Date().toISOString(),
   };
 
   try {
