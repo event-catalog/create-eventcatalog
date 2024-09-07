@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.15
+
+### Patch Changes
+
+- 0b18c9f: feat(cli): adding analytics support
+
 ## 2.0.14
 
 ### Patch Changes
