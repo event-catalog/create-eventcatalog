@@ -22,6 +22,7 @@ export async function createApp({
   typescript,
   eslint,
   experimentalApp,
+  organizationName
 }: {
   appPath: string;
   packageManager: PackageManager;
@@ -30,6 +31,7 @@ export async function createApp({
   typescript: boolean;
   eslint: boolean;
   experimentalApp: boolean;
+  organizationName: string;
 }): Promise<void> {
   let repoInfo: RepoInfo | undefined;
   const mode: TemplateMode = typescript ? "ts" : "js";
@@ -77,6 +79,7 @@ export async function createApp({
     packageManager,
     isOnline,
     eslint,
+    organizationName
   });
   // }
 

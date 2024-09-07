@@ -2,7 +2,7 @@
 export default {
   title: 'EventCatalog',
   tagline: 'Discover, Explore and Document your Event Driven Architectures',
-  organizationName: 'Your Company',
+  organizationName: '<organizationName>',
   homepageLink: 'https://eventcatalog.dev/',
   editUrl: 'https://github.com/boyney123/eventcatalog-demo/edit/master',
   // By default set to false, add true to get urls ending in /
@@ -21,5 +21,7 @@ export default {
       // Should the sub heading be rendered in the docs sidebar?
       showPageHeadings: true
     }
-  }
+  },
+  // required random generated id used by eventcatalog
+  cId: '<cId>'
 }
