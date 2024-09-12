@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.16
+
+### Patch Changes
+
+- 26595e1: fix(cli): added missing dev dependency for diff
+
 ## 2.0.15
 
 ### Patch Changes
