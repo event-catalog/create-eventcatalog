@@ -79,6 +79,7 @@ export const installTemplate = async ({
     "concurrently",
     "cross-env",
     "@types/lodash.merge",
+    "@types/diff",
   ] as any;
 
   /**
