@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.19
+
+### Patch Changes
+
+- 37469aa: fix(cli): fixed broken version of service in the catalog
+
 ## 2.0.18
 
 ### Patch Changes
