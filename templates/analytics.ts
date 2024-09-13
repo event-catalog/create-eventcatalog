@@ -21,6 +21,7 @@ async function raiseEvent(eventData: EventMetadata): Promise<void> {
     event: "@eventcatalog/create-eventcatalog",
     metadata: {
       ...eventData,
+      t: `t;${new Date().toISOString()}`,
       ua: userAgent
     },
     ua: userAgent
