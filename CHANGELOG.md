@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.17
+
+### Patch Changes
+
+- d0cc42a: chore(cli): added timestamps
+
 ## 2.0.16
 
 ### Patch Changes
