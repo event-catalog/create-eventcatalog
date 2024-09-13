@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.18
+
+### Patch Changes
+
+- d0eb215: feat(cli): added tiles to the default template
+
 ## 2.0.17
 
 ### Patch Changes
