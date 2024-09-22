@@ -50,9 +50,6 @@ export const installTemplate = async ({
       preview: "eventcatalog preview",
       generate: "eventcatalog generate",
       test: 'echo "Error: no test specified" && exit 1',
-    },
-    dependencies: {
-      "@eventcatalog/core": "latest"
     }
   };
   /**
@@ -72,7 +69,9 @@ export const installTemplate = async ({
    * Default dependencies.
    */
   // const dependencies = ["@eventcatalog/eventcatalog-2"];
-  const dependencies = [] as any;
+  const dependencies = [
+    "@eventcatalog/core"
+  ] as any;
   // "@myuser/my-package": "file:../lib"
   const devDependencies = [] as any;
 
