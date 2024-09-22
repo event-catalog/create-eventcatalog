@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.20
+
+### Patch Changes
+
+- 321a2a0: chore(cli): removing dev deps no longer required
+
 ## 2.0.19
 
 ### Patch Changes
