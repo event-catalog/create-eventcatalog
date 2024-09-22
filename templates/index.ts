@@ -74,13 +74,7 @@ export const installTemplate = async ({
   // const dependencies = ["@eventcatalog/eventcatalog-2"];
   const dependencies = [] as any;
   // "@myuser/my-package": "file:../lib"
-  const devDependencies = [
-    "@parcel/watcher",
-    "concurrently",
-    "cross-env",
-    "@types/lodash.merge",
-    "@types/diff",
-  ] as any;
+  const devDependencies = [] as any;
 
   /**
    * Install package.json dependencies if they exist.
