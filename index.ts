@@ -18,8 +18,9 @@ const program = new Commander.Command(packageJson.name)
   .version(packageJson.version)
   .arguments("<project-directory>")
   .usage(`${chalk.green("<project-directory>")} [options]`)
-  .action((name) => {
+  .action((name, options) => {
     projectPath = name;
+    organizationName = options.organizationName || "";
   })
   .option(
     "--ts, --typescript",
@@ -80,6 +81,13 @@ const program = new Commander.Command(packageJson.name)
   a slash (e.g. bug/fix-1) and the path to the example (e.g. foo/bar).
   In this case, you must specify the path to the example separately:
   --example-path foo/bar
+`,
+  )
+  .option(
+    "--organization-name [name]",
+    `
+
+  The organization name.
 `,
   )
   .allowUnknownOption()
