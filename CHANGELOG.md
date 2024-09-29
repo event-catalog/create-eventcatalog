@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.0.22
+
+### Patch Changes
+
+- 2c25837: feat(cli): added ability to set org name through CLI command
+
 ## 2.0.21
 
 ### Patch Changes
