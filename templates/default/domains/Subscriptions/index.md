@@ -1,13 +1,13 @@
 ---
-id: Payment
-name: Payment
+id: Subscription
+name: Subscription
 version: 0.0.1
 summary: |
-  Domain that contains payment related services and messages.
+  Domain that contains subscription related services and messages.
 owners:
     - dboyne
 services:
-    - id: PaymentService
+    - id: SubscriptionService
       version: 0.0.1
 badges:
     - content: Payment Domain

@@ -16,12 +16,6 @@ export default {
     src: '/logo.png',
     text: 'EventCatalog'
   },
-  docs: {
-    sidebar: {
-      // Should the sub heading be rendered in the docs sidebar?
-      showPageHeadings: true
-    }
-  },
   // required random generated id used by eventcatalog
   cId: '<cId>'
 }
