@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.1.0
+
+### Minor Changes
+
+- 1ba28b3: chore(cli): updated the demo app that is installed
+
 ## 2.0.22
 
 ### Patch Changes
