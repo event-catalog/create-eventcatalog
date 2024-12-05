@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.1.1
+
+### Patch Changes
+
+- 7ab834c: feat(core): added ubiquitous language support
+
 ## 2.1.0
 
 ### Minor Changes
