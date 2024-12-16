@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.0
+
+### Minor Changes
+
+- e06496b: feat(cli): added ability to create empty project
+
 ## 2.1.1
 
 ### Patch Changes
