@@ -22,7 +22,8 @@ export async function createApp({
   typescript,
   eslint,
   experimentalApp,
-  organizationName
+  organizationName,
+  initEmptyProject
 }: {
   appPath: string;
   packageManager: PackageManager;
@@ -32,10 +33,11 @@ export async function createApp({
   eslint: boolean;
   experimentalApp: boolean;
   organizationName: string;
+  initEmptyProject: boolean;
 }): Promise<void> {
   let repoInfo: RepoInfo | undefined;
   const mode: TemplateMode = typescript ? "ts" : "js";
-  const template: TemplateType = experimentalApp ? "app" : "default";
+  const template: TemplateType = initEmptyProject ? "empty" : "default";
 
   const root = path.resolve(appPath);
 

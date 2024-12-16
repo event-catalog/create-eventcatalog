@@ -90,6 +90,13 @@ const program = new Commander.Command(packageJson.name)
   The organization name.
 `,
   )
+  .option(
+    "--empty",
+    `
+
+  Initialize the project with an empty template.
+`,
+  )
   .allowUnknownOption()
   .parse(process.argv);
 
@@ -176,6 +183,10 @@ async function run(): Promise<void> {
 
   const example = typeof program.example === "string" && program.example.trim();
 
+  const options = program.opts();
+  const initEmptyProject = options.empty ?? false;
+  
+
   try {
     await createApp({
       appPath: resolvedProjectPath,
@@ -185,7 +196,8 @@ async function run(): Promise<void> {
       typescript: true,
       eslint: true,
       experimentalApp: false,
-      organizationName: organizationName
+      organizationName: organizationName,
+      initEmptyProject,
     });
   } catch (reason) {
     if (!(reason instanceof DownloadError)) {
@@ -211,6 +223,7 @@ async function run(): Promise<void> {
       eslint: program.eslint,
       organizationName: organizationName,
       experimentalApp: program.experimentalApp,
+      initEmptyProject,
     });
   }
 }
