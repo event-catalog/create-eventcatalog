@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.1
+
+### Patch Changes
+
+- c2a57f6: chore(cli): added npmrc file to new projects
+
 ## 2.2.0
 
 ### Minor Changes
