@@ -112,6 +112,7 @@ export const installTemplate = async ({
       switch (name) {
         case "env":
         case "gitignore":
+        case "npmrc":
         case "dockerignore":
         case "eslintrc.json": {
           return ".".concat(name);
