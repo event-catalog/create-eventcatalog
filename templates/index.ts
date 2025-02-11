@@ -72,6 +72,16 @@ export const installTemplate = async ({
   const dependencies = [
     "@eventcatalog/core"
   ] as any;
+
+  // if asyncapi is selected, add the asyncapi dependencies
+  if (template === "asyncapi") {
+    dependencies.push("@eventcatalog/generator-asyncapi");
+  }
+
+  if (template === "openapi") {
+    dependencies.push("@eventcatalog/generator-openapi");
+  }
+
   // "@myuser/my-package": "file:../lib"
   const devDependencies = [] as any;
 
