@@ -91,6 +91,13 @@ const program = new Commander.Command(packageJson.name)
 `,
   )
   .option(
+    "--template [name]",
+    `
+
+  The template to use.
+`,
+  )
+  .option(
     "--empty",
     `
 
@@ -159,6 +166,8 @@ async function run(): Promise<void> {
     }
   }
 
+  const template = program.template || "default";
+
   const resolvedProjectPath = path.resolve(projectPath);
   const projectName = path.basename(resolvedProjectPath);
 
@@ -198,6 +207,7 @@ async function run(): Promise<void> {
       experimentalApp: false,
       organizationName: organizationName,
       initEmptyProject,
+      template: template,
     });
   } catch (reason) {
     if (!(reason instanceof DownloadError)) {
