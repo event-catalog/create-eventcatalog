@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.4
+
+### Patch Changes
+
+- 2a0e5b7: feat(core): added rss feed for all templates
+
 ## 2.2.3
 
 ### Patch Changes
