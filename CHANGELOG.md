@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.3
+
+### Patch Changes
+
+- 5bef981: feat(cli): added users and teams to templates
+
 ## 2.2.2
 
 ### Patch Changes
