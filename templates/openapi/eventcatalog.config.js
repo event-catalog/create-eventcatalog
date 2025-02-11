@@ -55,6 +55,12 @@ export default {
       },
     ],
   ],
+  // Enable RSS feed for your eventcatalog
+  rss: {
+    enabled: true,
+    // number of items to include in the feed per resource (event, service, etc)
+    limit: 20
+  },
   // required random generated id used by eventcatalog
   cId: '<cId>'
 };
