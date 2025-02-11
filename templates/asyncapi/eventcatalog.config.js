@@ -25,7 +25,7 @@ export default {
       '@eventcatalog/generator-asyncapi',
       {
         services: [
-          { path: path.join(__dirname, 'asyncapi-files', 'orders-service.yml'), id: 'Orders Service' },
+          { path: path.join(__dirname, 'asyncapi-files', 'orders-service.yml'), owners: ['order-management'], id: 'Orders Service' },
         ],
         domain: { id: 'orders', name: 'Orders', version: '0.0.1' },
       },
@@ -34,7 +34,7 @@ export default {
       '@eventcatalog/generator-asyncapi',
       {
         services: [
-          { path: path.join(__dirname, 'asyncapi-files', 'payment-service.yml'), id: 'Payment Service' },
+          { path: path.join(__dirname, 'asyncapi-files', 'payment-service.yml'), owners: ['order-management'], id: 'Payment Service' },
         ],
         domain: { id: 'payment', name: 'Payment', version: '0.0.1' },
       },
@@ -43,7 +43,7 @@ export default {
       '@eventcatalog/generator-asyncapi',
       {
         services: [
-          { path: path.join(__dirname, 'asyncapi-files', 'user-service.yml'), id: 'User Service' },
+          { path: path.join(__dirname, 'asyncapi-files', 'user-service.yml'), owners: ['user-management'], id: 'User Service' },
         ],
         domain: { id: 'user-domain', name: 'User Domain', version: '0.0.1' },
         debug: true
