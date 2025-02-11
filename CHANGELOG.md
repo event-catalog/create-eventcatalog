@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.2
+
+### Patch Changes
+
+- 39a318f: feat(cli): added openapi and asyncapi templates
+
 ## 2.2.1
 
 ### Patch Changes
