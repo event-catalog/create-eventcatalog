@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.5
+
+### Patch Changes
+
+- 9b9dfc0: feat(cli): default sidebar is now tree view
+
 ## 2.2.4
 
 ### Patch Changes
