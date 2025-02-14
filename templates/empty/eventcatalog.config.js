@@ -22,6 +22,13 @@ export default {
     // number of items to include in the feed per resource (event, service, etc)
     limit: 20
   },
+  docs: {
+    sidebar: {
+      // TREE_VIEW will render the DOCS as a tree view and map your file system folder structure
+      // FLAT_VIEW will render the DOCS as a flat list (no nested folders)
+      type: 'TREE_VIEW'
+    },
+  },
   // required random generated id used by eventcatalog
   cId: '<cId>'
 }

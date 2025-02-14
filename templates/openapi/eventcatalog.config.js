@@ -55,6 +55,13 @@ export default {
       },
     ],
   ],
+  docs: {
+    sidebar: {
+      // TREE_VIEW will render the DOCS as a tree view and map your file system folder structure
+      // FLAT_VIEW will render the DOCS as a flat list (no nested folders)
+      type: 'TREE_VIEW'
+    },
+  },
   // Enable RSS feed for your eventcatalog
   rss: {
     enabled: true,
