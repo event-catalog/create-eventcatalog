@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 2.2.7
+
+### Patch Changes
+
+- e4fc580: chore(cli): updated default nav bar
+- 1af508d: chore(core): updated the default app for users
+
 ## 2.2.6
 
 ### Patch Changes
