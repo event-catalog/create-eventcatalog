@@ -6,7 +6,7 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 /** @type {import('@eventcatalog/core/bin/eventcatalog.config').Config} */
 export default {
   title: "EventCatalog",
-  tagline: "Discover, Explore and Document your Event Driven Architectures",
+  tagline: 'This internal platform provides a comprehensive view of our event-driven architecture across all systems. Use this portal to discover existing domains, explore services and their dependencies, and understand the message contracts that connect our infrastructure',
   organizationName: '<organizationName>',
   homepageLink: "https://eventcatalog.dev/",
   editUrl: "https://github.com/boyney123/eventcatalog-demo/edit/master",
