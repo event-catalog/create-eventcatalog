@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 2.2.6
+
+### Patch Changes
+
+- 27527ad: chore(core): updated the default app for users
+
 ## 2.2.5
 
 ### Patch Changes
