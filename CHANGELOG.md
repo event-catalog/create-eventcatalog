@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.0
+
+### Major Changes
+
+- 7533525: chore(cli): moving to mdx files for catalogs
+
 ## 2.2.7
 
 ### Patch Changes
