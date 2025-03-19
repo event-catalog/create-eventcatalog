@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.1
+
+### Patch Changes
+
+- 7dc0541: chore(cli): adding new flow example
+
 ## 3.0.0
 
 ### Major Changes
