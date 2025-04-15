@@ -7,34 +7,50 @@ owners:
   - full-stack
 services:
   - id: InventoryService
-  - id: NotificationService
   - id: OrdersService
-  - id: PaymentService
+  - id: NotificationService
+  - id: ShippingService
 badges:
-  - content: New domain
+  - content: Subdomain
     backgroundColor: blue
     textColor: blue
+    icon: RectangleGroupIcon
+
+resourceGroups:
+  - id: related-resources
+    title: Core resources
+    items:
+      - id: InventoryService
+        type: service
+      - id: OrdersService
+        type: service
+      - id: NotificationService
+        type: service
+      - id: ShippingService
+        type: service
 ---
 
 import Footer from '@catalog/components/footer.astro';
 
-## Overview
 
-<Admonition type="warning">Please ensure all services are updated to the latest version for compatibility and performance improvements.</Admonition>
 
-The Orders domain handles all operations related to customer orders, from creation to fulfillment. This documentation provides an overview of the events and services involved in the Orders domain, helping developers and stakeholders understand the event-driven architecture.
+:::warning
 
+Please ensure all services are **updated** to the latest version for compatibility and performance improvements.
+:::
+
+The Orders domain handles all operations related to customer orders, from creation to fulfillment. This documentation provides an overview of the events and services involved in the Orders domain, helping developers and stakeholders understand the event-driven architecture
 
 <Tiles >
     <Tile icon="UserGroupIcon" href="/docs/teams/full-stack" title="Contact the team" description="Any questions? Feel free to contact the owners" />
-    <Tile icon="RectangleGroupIcon" href={`/visualiser/domains/${frontmatter.id}/${frontmatter.version}`} title={`${frontmatter.services.length} services are in this domain`} description="This service sends messages to downstream consumers" />
+    <Tile icon="RectangleGroupIcon" href={`/visualiser/domains/${frontmatter.id}/${frontmatter.version}`} title={`${frontmatter.services.length} services`} description="This domain contains the following services." />
 </Tiles>
 
-
-
-## Bounded context
+### Architecture for the Orders domain
 
 <NodeGraph />
+
+<MessageTable format="all" limit={4} showChannels={true} title="Messages in/out of the domain" />
 
 ### Order example (sequence diagram)
 
@@ -66,5 +82,7 @@ Documented flow when a user cancels their subscription.
 Documented flow when a user makes a payment within the order domain
 
 <Flow id="PaymentFlow" version="latest" includeKey={false} />
+
+<ResourceGroupTable id="related-resources" limit={4} showOwners={true} title="Core resources for the Orders domain" description="Resources that are related to the Orders domain, you may find them useful" />
 
 <Footer />
