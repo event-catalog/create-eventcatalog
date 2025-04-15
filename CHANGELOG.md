@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.2
+
+### Patch Changes
+
+- f50df4b: Added subdomain to template
+
 ## 3.0.1
 
 ### Patch Changes
