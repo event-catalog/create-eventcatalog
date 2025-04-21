@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.4
+
+### Patch Changes
+
+- ede050c: chore(cli): added .env files to all templates
+
 ## 3.0.3
 
 ### Patch Changes
