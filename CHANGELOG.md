@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.3
+
+### Patch Changes
+
+- 518bf81: chore(cli): added env files to git ignore
+
 ## 3.0.2
 
 ### Patch Changes
