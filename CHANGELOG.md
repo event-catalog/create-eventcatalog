@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.5
+
+### Patch Changes
+
+- f46e524: chore(sdk): added docker file for a server catalog
+
 ## 3.0.4
 
 ### Patch Changes
