@@ -1,6 +1,6 @@
 import { PackageManager } from "../helpers/get-pkg-manager";
 
-export type TemplateType = "default" | "app" | "empty" | "asyncapi" | "openapi";
+export type TemplateType = "default" | "app" | "empty" | "asyncapi" | "openapi" | "confluent";
 export type TemplateMode = "js" | "ts";
 
 export interface GetTemplateFileArgs {

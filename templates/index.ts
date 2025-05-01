@@ -82,6 +82,10 @@ export const installTemplate = async ({
     dependencies.push("@eventcatalog/generator-openapi");
   }
 
+  if (template === "confluent") {
+    dependencies.push("@eventcatalog/generator-confluent-schema-registry");
+  }
+
   // "@myuser/my-package": "file:../lib"
   const devDependencies = [] as any;
 
