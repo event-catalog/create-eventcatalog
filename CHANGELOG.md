@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.6
+
+### Patch Changes
+
+- 2cb81d9: feat(cli): added confluent template
+
 ## 3.0.5
 
 ### Patch Changes
