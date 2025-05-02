@@ -31,15 +31,14 @@ export default {
   },
   // required random generated id used by eventcatalog
   cId: '<cId>',
-  generators: [
-    [
-      '@eventcatalog/generator-confluent-schema-registry',
-      {
-        // The URL for your schema registry
-        schemaRegistryUrl: 'http://localhost:8081',
-        // This will document all the schemas in the registry, not just the latest version (default is false)
-        includeAllVersions: true
-      },
-    ],
+  // Just import all events into the Catalog from a registry
+  [
+    '@eventcatalog/generator-eventbridge',
+    {
+      // The region of your EventBridge registry
+      region: 'us-east-1',
+      // The name of your EventBridge registry
+      registryName: 'discovered-schemas'
+    },
   ],
 }
