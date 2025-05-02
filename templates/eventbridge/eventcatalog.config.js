@@ -1,7 +1,7 @@
 /** @type {import('@eventcatalog/core/bin/eventcatalog.config').Config} */
 export default {
   title: 'EventCatalog',
-  tagline: 'This internal platform provides a comprehensive view of our event-driven architecture across all systems. Use this portal to discover kafka schemas, topics, services and domains, and understand the message contracts that connect our infrastructure',
+  tagline: 'This internal platform provides a comprehensive view of our event-driven architecture across all systems. Use this portal to discover EventBridge schemas, services and domains, and understand the message contracts that connect our infrastructure',
   organizationName: '<organizationName>',
   homepageLink: 'https://eventcatalog.dev/',
   editUrl: 'https://github.com/boyney123/eventcatalog-demo/edit/master',
