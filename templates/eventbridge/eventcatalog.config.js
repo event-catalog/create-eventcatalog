@@ -32,7 +32,7 @@ export default {
   // required random generated id used by eventcatalog
   cId: '<cId>',
   // Just import all events into the Catalog from a registry
-  [
+  generators: [
     '@eventcatalog/generator-eventbridge',
     {
       // The region of your EventBridge registry
