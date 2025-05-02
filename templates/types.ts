@@ -1,6 +1,6 @@
 import { PackageManager } from "../helpers/get-pkg-manager";
 
-export type TemplateType = "default" | "app" | "empty" | "asyncapi" | "openapi" | "confluent" | "eventbridge";
+export type TemplateType = "default" | "app" | "empty" | "asyncapi" | "openapi" | "confluent" | "eventbridge" | "amazon-apigateway";
 export type TemplateMode = "js" | "ts";
 
 export interface GetTemplateFileArgs {
