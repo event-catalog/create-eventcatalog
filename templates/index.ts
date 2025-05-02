@@ -90,6 +90,11 @@ export const installTemplate = async ({
     dependencies.push("@eventcatalog/generator-eventbridge");
   }
 
+  if (template === "amazon-apigateway") {
+    dependencies.push("@eventcatalog/generator-amazon-apigateway");
+    dependencies.push("@eventcatalog/generator-openapi");
+  }
+
   // "@myuser/my-package": "file:../lib"
   const devDependencies = [] as any;
 
