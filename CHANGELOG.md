@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 3.0.7
+
+### Patch Changes
+
+- 975ba61: chore(cli): added apigateway template for create-catalog
+- 25047cc: chore(cli): added eventbridge template to create-catalog-cli
+
 ## 3.0.6
 
 ### Patch Changes
