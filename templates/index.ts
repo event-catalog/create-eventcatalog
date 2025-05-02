@@ -86,6 +86,10 @@ export const installTemplate = async ({
     dependencies.push("@eventcatalog/generator-confluent-schema-registry");
   }
 
+  if (template === "eventbridge") {
+    dependencies.push("@eventcatalog/generator-eventbridge");
+  }
+
   // "@myuser/my-package": "file:../lib"
   const devDependencies = [] as any;
 

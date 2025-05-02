@@ -1,7 +1,7 @@
 /** @type {import('@eventcatalog/core/bin/eventcatalog.config').Config} */
 export default {
   title: 'EventCatalog',
-  tagline: 'This internal platform provides a comprehensive view of our event-driven architecture across all systems. Use this portal to discover kafka schemas, topics, services and domains, and understand the message contracts that connect our infrastructure',
+  tagline: 'This internal platform provides a comprehensive view of our event-driven architecture across all systems. Use this portal to discover EventBridge schemas, services and domains, and understand the message contracts that connect our infrastructure',
   organizationName: '<organizationName>',
   homepageLink: 'https://eventcatalog.dev/',
   editUrl: 'https://github.com/boyney123/eventcatalog-demo/edit/master',
@@ -31,15 +31,14 @@ export default {
   },
   // required random generated id used by eventcatalog
   cId: '<cId>',
+  // Just import all events into the Catalog from a registry
   generators: [
-    [
-      '@eventcatalog/generator-confluent-schema-registry',
-      {
-        // The URL for your schema registry
-        schemaRegistryUrl: 'http://localhost:8081',
-        // This will document all the schemas in the registry, not just the latest version (default is false)
-        includeAllVersions: true
-      },
-    ],
+    '@eventcatalog/generator-eventbridge',
+    {
+      // The region of your EventBridge registry
+      region: 'us-east-1',
+      // The name of your EventBridge registry
+      registryName: 'discovered-schemas'
+    },
   ],
 }
