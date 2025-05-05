@@ -29,6 +29,11 @@ export default {
     // number of items to include in the feed per resource (event, service, etc)
     limit: 20
   },
+  // This lets you copy markdown contents from EventCatalog to your clipboard
+  // Including schemas for your events and services
+  llmsTxt: {
+    enabled: true,
+  },
   // required random generated id used by eventcatalog
   cId: '<cId>'
 }

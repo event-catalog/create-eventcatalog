@@ -29,6 +29,11 @@ export default {
       type: 'LIST_VIEW'
     },
   },
+  // This lets you copy markdown contents from EventCatalog to your clipboard
+  // Including schemas for your events and services
+  llmsTxt: {
+    enabled: true,
+  },
   // required random generated id used by eventcatalog
   cId: '<cId>',
   // Just import all events into the Catalog from a registry

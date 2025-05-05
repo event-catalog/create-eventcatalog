@@ -21,6 +21,11 @@ export default {
     src: "/logo.png",
     text: "EventCatalog",
   },
+  // This lets you copy markdown contents from EventCatalog to your clipboard
+  // Including schemas for your events and services
+  llmsTxt: {
+    enabled: true,
+  },
   generators: [
     [
       "@eventcatalog/generator-openapi",
