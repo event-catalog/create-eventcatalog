@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.9
+
+### Patch Changes
+
+- c22f0b4: chore(core): updated logs
+
 ## 3.0.8
 
 ### Patch Changes
