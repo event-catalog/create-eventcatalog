@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 3.0.8
+
+### Patch Changes
+
+- aa1c580: chore(core): updated astro versions
+- e162579: feat(cli): llms txt is now enabled by default on new catalogs
+
 ## 3.0.7
 
 ### Patch Changes
