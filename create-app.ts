@@ -100,6 +100,8 @@ export async function createApp({
   }
 
   console.log(`${chalk.green("Success!")} Created ${appName} at ${appPath}`);
+  console.log(chalk.yellow("\nIf you like EventCatalog, please consider starring us on GitHub! It means a lot to us: https://github.com/event-catalog/eventcatalog/stargazers"));
+  console.log(chalk.blue("\nGot questions? Join our community on Discord: https://discord.gg/3rjaZMmrAm"));
 
   if (hasPackageJson) {
     console.log("Inside that directory, you can run several commands:");
