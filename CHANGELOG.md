@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.10
+
+### Patch Changes
+
+- d3aa09b: chore(cli): added output to catalog configs
+
 ## 3.0.9
 
 ### Patch Changes
