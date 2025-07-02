@@ -10,6 +10,12 @@ services:
   - id: OrdersService
   - id: NotificationService
   - id: ShippingService
+entities:
+  - id: Order
+  - id: OrderItem
+  - id: Customer
+  - id: ShoppingCart
+  - id: CartItem
 badges:
   - content: Subdomain
     backgroundColor: blue
@@ -49,6 +55,13 @@ The Orders domain handles all operations related to customer orders, from creati
 ### Architecture for the Orders domain
 
 <NodeGraph />
+
+### Entity Map
+
+A visualization of the entities in the Orders domain. Here you can see the relationships between the entities and how they are used in the domain.
+
+<EntityMap id="Orders" />
+
 
 <MessageTable format="all" limit={4} showChannels={true} title="Messages in/out of the domain" />
 
