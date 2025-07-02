@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.11
+
+### Patch Changes
+
+- ef28ab9: chore(core): updated default catalog to include entities
+
 ## 3.0.10
 
 ### Patch Changes
