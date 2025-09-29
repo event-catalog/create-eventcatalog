@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.13
+
+### Patch Changes
+
+- 923aee9: fix(code): fixed graphql template
+
 ## 3.0.12
 
 ### Patch Changes
