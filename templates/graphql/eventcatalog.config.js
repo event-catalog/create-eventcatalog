@@ -34,7 +34,7 @@ export default {
       "@eventcatalog/generator-graphql",
       {
         services: [
-          { path: path.join(__dirname, "graphql-files", "orders-service.graphql"), id: 'orders-service', owners: ['order-management'] },
+          { path: path.join(__dirname, "graphql-files", "orders-service.graphql"), id: 'orders-service', version: '0.0.1', owners: ['order-management'] },
         ],
         domain: { id: "orders", name: "Orders", version: "0.0.1" },
       },
@@ -43,7 +43,7 @@ export default {
       "@eventcatalog/generator-graphql",
       {
         services: [
-          { path: path.join(__dirname, "graphql-files", "payment-service.graphql"), id: 'payment-service', owners: ['payment-management'] },
+          { path: path.join(__dirname, "graphql-files", "payment-service.graphql"), id: 'payment-service', version: '0.0.1', owners: ['payment-management'] },
         ],
         domain: { id: "payment", name: "Payment", version: "0.0.1" },
       },
