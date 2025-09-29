@@ -82,6 +82,10 @@ export const installTemplate = async ({
     dependencies.push("@eventcatalog/generator-openapi");
   }
 
+  if (template === "graphql") {
+    dependencies.push("@eventcatalog/generator-graphql");
+  }
+
   if (template === "confluent") {
     dependencies.push("@eventcatalog/generator-confluent-schema-registry");
   }
