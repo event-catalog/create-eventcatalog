@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.0.12
+
+### Patch Changes
+
+- 6d9b43e: feat(code): added new starter template for graphql
+
 ## 3.0.11
 
 ### Patch Changes
