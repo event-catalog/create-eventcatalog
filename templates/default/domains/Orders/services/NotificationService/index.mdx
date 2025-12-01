@@ -5,24 +5,28 @@ name: Notifications
 summary: |
   Service that handles orders
 owners:
-    - dboyne
+  - dboyne
 receives:
   - id: InventoryAdjusted
-    version: ">1.0.0"
+    version: '>1.0.0'
+    from:
+      - id: 'inventory.{env}.events'
   - id: PaymentProcessed
     version: ^1.0.0
-  - id: GetUserNotifications
-    version: x
+    from:
+      - id: 'payments.{env}.events'
+        parameters:
+          env: staging
   - id: GetNotificationDetails
-    version: x
+  - id: GetUserNotifications
 sends:
   - id: OutOfStock
     version: latest
-  - id: GetInventoryList
-    version: 0.0.x
+    to:
+      - id: 'inventory.{env}.events'
 repository:
   language: JavaScript
-  url: https://github.com/event-catalog/pretend-shipping-service
+  url: 'https://github.com/event-catalog/pretend-shipping-service'
 ---
 
 import Footer from '@catalog/components/footer.astro';

@@ -5,21 +5,37 @@ name: Orders Service
 summary: |
   Service that handles orders
 owners:
-    - dboyne
+  - dboyne
 receives:
   - id: InventoryAdjusted
     version: 0.0.3
+    from:
+      - id: 'inventory.{env}.events'
+  - id: CreateReturnLabel
+  - id: PlaceOrder
   - id: GetOrder
 sends:
   - id: OrderAmended
+    to:
+      - id: 'orders.{env}.events'
+        parameters:
+          env: staging
   - id: OrderCancelled
+    to:
+      - id: 'orders.{env}.events'
   - id: OrderConfirmed
-  - id: AddInventory  
+    to:
+      - id: 'orders.{env}.events'
+  - id: AddInventory
     version: 0.0.3
+    to:
+      - id: 'inventory.{env}.events'
+        parameters:
+          env: staging
 repository:
   language: JavaScript
-  url: https://github.com/event-catalog/pretend-shipping-service
-schemaPath: "openapi.yml"
+  url: 'https://github.com/event-catalog/pretend-shipping-service'
+schemaPath: openapi.yml
 specifications:
   asyncapiPath: order-service-asyncapi.yaml
   openapiPath: openapi.yml

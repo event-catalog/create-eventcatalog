@@ -9,7 +9,6 @@ import { createApp, DownloadError } from "./create-app";
 import { getPkgManager } from "./helpers/get-pkg-manager";
 import { validateNpmName } from "./helpers/validate-pkg";
 import packageJson from "./package.json";
-import ciInfo from "ci-info";
 
 let projectPath: string = "";
 let organizationName: string = "";
