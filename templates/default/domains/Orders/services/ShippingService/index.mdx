@@ -5,13 +5,16 @@ name: Shipping Service
 summary: |
   Service that handles shipping
 owners:
-    - dboyne
+  - dboyne
 receives:
+  - id: PaymentProcessed
+    from:
+      - id: 'payments.{env}.events'
+        parameters:
+          env: staging
   - id: CancelShipment
-  - id: CreateReturnLabel
   - id: CreateShipment
   - id: UpdateShipmentStatus
-  - id: PaymentProcessed
 sends:
   - id: ShipmentCreated
   - id: ReturnInitiated
@@ -21,7 +24,7 @@ sends:
   - id: DeliveryFailed
 repository:
   language: JavaScript
-  url: https://github.com/event-catalog/pretend-shipping-service
+  url: 'https://github.com/event-catalog/pretend-shipping-service'
 ---
 
 import Footer from '@catalog/components/footer.astro';

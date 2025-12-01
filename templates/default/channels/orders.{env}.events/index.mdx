@@ -9,7 +9,8 @@ owners:
 address: orders.{env}.events
 protocols: 
   - kafka
-
+routes:
+  - id: inventory-queue
 parameters:
   env:
     enum:

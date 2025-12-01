@@ -2,22 +2,22 @@
 id: BillingService
 version: 0.0.1
 name: Billing Service
-summary: Manages billing cycles, invoice generation, and payment scheduling for subscriptions
+summary: >-
+  Manages billing cycles, invoice generation, and payment scheduling for
+  subscriptions
 tags:
   - billing
   - subscriptions
   - invoicing
 repository:
-  url: https://github.com/eventcatalog/billing-service
+  url: 'https://github.com/eventcatalog/billing-service'
 receives:
-  - id: SubscriptionCreated
-    version: 0.0.1
-  - id: SubscriptionUpdated
-    version: 0.0.1
   - id: PaymentProcessed
     version: 0.0.1
-  - id: PaymentFailed
-    version: 0.0.1
+    from:
+      - id: 'payments.{env}.events'
+        parameters:
+          env: staging
 sends:
   - id: InvoiceGenerated
     version: 0.0.1
