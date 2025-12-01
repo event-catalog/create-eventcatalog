@@ -5,6 +5,10 @@
   "bin": {
     "create-catalog": "./dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/event-catalog/create-eventcatalog.git"
+  },
   "files": [
     "dist",
     "templates"
