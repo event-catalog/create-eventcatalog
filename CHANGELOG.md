@@ -1,5 +1,12 @@
 # @eventcatalog/create-catalog
 
+## 3.1.1
+
+### Patch Changes
+
+- 788651e: feat(core): added new channel 2.0 support for new catalogs
+- 6470f31: feat(core): added new channel 2.0 support for new catalogs
+
 ## 3.1.0
 
 ### Minor Changes
