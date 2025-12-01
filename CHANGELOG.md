@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.1.0
+
+### Minor Changes
+
+- fcc8232: feat(core): added new channel 2.0 support for new catalogs
+
 ## 3.0.13
 
 ### Patch Changes
