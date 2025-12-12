@@ -165,6 +165,27 @@ async function run(): Promise<void> {
     }
   }
 
+  // Ask if user wants an onboarding call
+  const onboardingRes = await prompts({
+    type: "confirm",
+    name: "wantsOnboarding",
+    message: "Would you like a free onboarding call to learn how EventCatalog can help your team?",
+    initial: false
+  });
+
+  if (onboardingRes.wantsOnboarding) {
+    console.log();
+    console.log(chalk.cyan("Great! You can schedule your free onboarding call here:"));
+    console.log(chalk.bold.underline("https://calendly.com/boyneyy123/eventcatalog-onboard-session"));
+    console.log();
+
+    await prompts({
+      type: "text",
+      name: "continue",
+      message: "Press Enter to continue with the installation..."
+    });
+  }
+
   const template = program.template || "default";
 
   const resolvedProjectPath = path.resolve(projectPath);
