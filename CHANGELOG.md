@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 3.1.3
+
+### Patch Changes
+
+- 23b4ad6: chore(cli): added onboarding call option
+
 ## 3.1.2
 
 ### Patch Changes
