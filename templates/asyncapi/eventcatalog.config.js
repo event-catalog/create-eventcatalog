@@ -18,6 +18,13 @@ export default {
   // Change to make the base url of the site different, by default https://{website}.com/docs,
   // changing to /company would be https://{website}.com/company/docs,
   base: '/',
+  // Customize the navigation for your docs sidebar.
+  // read more at https://eventcatalog.dev/docs/development/customization/customize-sidebars/documentation-sidebar
+  navigation: {
+    pages: [
+      'list:all',
+    ]
+  },
   logo: {
     alt: 'EventCatalog Logo',
     src: '/logo.png',
@@ -58,13 +65,6 @@ export default {
       },
     ],
   ],
-  docs: {
-    sidebar: {
-      // TREE_VIEW will render the DOCS as a tree view and map your file system folder structure
-      // LIST_VIEW will render the DOCS that look familiar to API documentation websites
-      type: 'LIST_VIEW'
-    },
-  },
   // Enable RSS feed for your eventcatalog
   rss: {
     enabled: true,
