@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 4.0.0
+
+### Major Changes
+
+- 1a1e50e: chore(sdk): updated default catalog config files for v3
+
 ## 3.1.3
 
 ### Patch Changes
