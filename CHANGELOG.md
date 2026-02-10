@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 4.1.3
+
+### Patch Changes
+
+- 4dea467: updated default catalog
+
 ## 4.1.2
 
 ### Patch Changes
