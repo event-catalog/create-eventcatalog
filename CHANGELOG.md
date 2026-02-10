@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 4.1.1
+
+### Patch Changes
+
+- 3a15829: Remove default index page from template
+
 ## 4.1.0
 
 ### Minor Changes
