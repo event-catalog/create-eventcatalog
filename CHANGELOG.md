@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 4.1.0
+
+### Minor Changes
+
+- 2260af7: feat(cli): improve CLI UX with cleaner output
+
 ## 4.0.0
 
 ### Major Changes
