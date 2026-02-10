@@ -3,6 +3,8 @@ id: PaymentFlow
 name: Payment Flow for customers
 version: 1.0.0
 summary: Business flow for processing payments in an e-commerce platform
+owners:
+  - dboyne
 steps:
     - id: "customer_place_order"
       title: Customer places order
@@ -66,9 +68,7 @@ steps:
         label: Retry payment process
     - id: "payment_complete"
       title: Payment Complete
-      message:
-        id: PaymentComplete
-        version: 0.0.2
+      type: node
       next_step:
         id: "order-complete"
         label: Order completed
