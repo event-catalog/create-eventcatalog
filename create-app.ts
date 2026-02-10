@@ -64,9 +64,6 @@ export async function createApp({
   const isOnline = !useYarn || (await getOnline());
   const originalDirectory = process.cwd();
 
-  console.log(`Creating a new EventCatalog in ${chalk.green(root)}.`);
-  console.log();
-
   process.chdir(root);
 
   let hasPackageJson = false;
@@ -85,12 +82,8 @@ export async function createApp({
     eslint,
     organizationName
   });
-  // }
 
-  if (tryGitInit(root)) {
-    console.log("Initialized a git repository.");
-    console.log();
-  }
+  const gitInitialized = tryGitInit(root);
 
   let cdpath: string;
   if (path.join(originalDirectory, appName) === appPath) {
@@ -99,30 +92,23 @@ export async function createApp({
     cdpath = appPath;
   }
 
-  console.log(`${chalk.green("Success!")} Created ${appName} at ${appPath}`);
-  console.log(chalk.yellow("\nIf you like EventCatalog, please consider starring us on GitHub! It means a lot to us: https://github.com/event-catalog/eventcatalog/stargazers"));
-  console.log(chalk.cyan("\nGot questions? Join our community on Discord: https://discord.gg/3rjaZMmrAm"));
-
-  if (hasPackageJson) {
-    console.log("Inside that directory, you can run several commands:");
-    console.log();
-    console.log(chalk.cyan(`  ${packageManager} ${useYarn ? "" : "run "}dev`));
-    console.log("    Starts the development server.");
-    console.log();
-    console.log(
-      chalk.cyan(`  ${packageManager} ${useYarn ? "" : "run "}build`),
-    );
-    console.log("    Builds the app for production.");
-    console.log();
-    console.log(chalk.cyan(`  ${packageManager} start`));
-    console.log("    Runs the built app in production mode.");
-    console.log();
-    console.log("We suggest that you begin by typing:");
-    console.log();
-    console.log(chalk.cyan("  cd"), cdpath);
-    console.log(
-      `  ${chalk.cyan(`${packageManager} ${useYarn ? "" : "run "}dev`)}`,
-    );
+  // Summary
+  console.log();
+  console.log(chalk.green("  Project initialized!"));
+  console.log(`    ${chalk.dim("■")} Template copied`);
+  console.log(`    ${chalk.dim("■")} Dependencies installed`);
+  if (gitInitialized) {
+    console.log(`    ${chalk.dim("■")} Git initialized`);
   }
+
+  // Next steps
+  console.log();
+  console.log(`  ${chalk.cyan.bold("next")}  You're all set! Explore your project!`);
+  console.log();
+  console.log(`  Enter your project directory using ${chalk.cyan("cd " + cdpath)}`);
+  console.log(`  Run ${chalk.cyan(`${packageManager} run dev`)} to start the dev server. ${chalk.dim("CTRL+C to stop.")}`);
+  console.log();
+  console.log(`  ${chalk.dim("Star us on GitHub:")} ${chalk.underline("https://github.com/event-catalog/eventcatalog")}`);
+  console.log(`  ${chalk.dim("Join our Discord:")}  ${chalk.underline("https://eventcatalog.dev/discord")}`);
   console.log();
 }

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import os from 'os';
 import pkg from '../package.json';
 
@@ -11,9 +10,6 @@ interface EventMetadata {
 async function raiseEvent(eventData: EventMetadata): Promise<void> {
   const url = "https://queue.simpleanalyticscdn.com/events";
   const userAgent = `@eventcatalog/create-eventcatalog/${pkg.version} (${os.platform()}; ${os.arch()}; Node/${process.version})`;
-  const headers = {
-    "Content-Type": "application/json",
-  };
 
   const payload = {
     type: "event",
@@ -28,7 +24,11 @@ async function raiseEvent(eventData: EventMetadata): Promise<void> {
   };
 
   try {
-    await axios.post(url, payload, { headers });
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
   } catch (error) {
     // swallow the error
   }
