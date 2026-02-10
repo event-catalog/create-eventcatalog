@@ -42,6 +42,7 @@
     "cross-spawn": "6.0.5",
     "fast-glob": "^3.3.2",
     "got": "^14.0.0",
+    "ora": "^5.4.1",
     "prompts": "2.1.0",
     "rimraf": "^5.0.7",
     "tar": "^4.4.19",
@@ -52,7 +53,6 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.6",
-    "axios": "^1.7.7",
     "uuid": "^10.0.0"
   },
   "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"

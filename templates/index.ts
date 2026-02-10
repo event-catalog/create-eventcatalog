@@ -4,7 +4,6 @@ import { install } from "../helpers/install";
 import os from "os";
 import fs from "fs";
 import path from "path";
-import chalk from "chalk";
 import { v4 } from 'uuid'
 
 import { GetTemplateFileArgs, InstallTemplateArgs } from "./types";
@@ -34,8 +33,6 @@ export const installTemplate = async ({
   eslint,
   organizationName
 }: InstallTemplateArgs) => {
-  console.log(chalk.bold(`Using ${packageManager}.`));
-
   /**
    * Create a package.json for the new project
    */
@@ -106,30 +103,16 @@ export const installTemplate = async ({
    * Install package.json dependencies if they exist.
    */
   if (dependencies.length) {
-    console.log();
-    console.log("Installing dependencies:");
-    for (const dependency of dependencies) {
-      console.log(`- ${chalk.cyan(dependency)}`);
-    }
-    console.log();
-
     await install(root, dependencies, installFlags);
   }
 
   if (devDependencies.length) {
-    console.log();
-    console.log("Installing devDependencies:");
-    for (const devDependency of devDependencies) {
-      // console.log(`- ${chalk.cyan(devDependency)}`);
-    }
-
     const devInstallFlags = { devDependencies: true, ...installFlags };
     await install(root, devDependencies, devInstallFlags);
   }
   /**
    * Copy the template files to the target directory.
    */
-  console.log("\nInitializing project with template:", template, "\n");
   const templatePath = path.join(__dirname, "../templates", template);
   // console.log("templatePath", templatePath, __dirname, template);
   await copy("**", root, {

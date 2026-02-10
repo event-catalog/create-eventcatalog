@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import chalk from "chalk";
 import spawn from "cross-spawn";
+import ora from "ora";
 import type { PackageManager } from "./get-pkg-manager";
 
 interface InstallArgs {
@@ -72,13 +73,8 @@ export function install(
        */
       args = ["install"];
       if (!isOnline) {
-        console.log(chalk.yellow("You appear to be offline."));
         if (useYarn) {
-          console.log(chalk.yellow("Falling back to the local Yarn cache."));
-          console.log();
           args.push("--offline");
-        } else {
-          console.log();
         }
       }
     }
@@ -90,11 +86,14 @@ export function install(
     } else {
       args.push(...npmFlags);
     }
+
+    const spinner = ora("Installing dependencies...").start();
+
     /**
      * Spawn the installation process.
      */
     const child = spawn(command, args, {
-      stdio: "inherit",
+      stdio: "pipe",
       env: {
         ...process.env,
         ADBLOCK: "1",
@@ -104,11 +103,24 @@ export function install(
         DISABLE_OPENCOLLECTIVE: "1",
       },
     });
+
+    let stderr = "";
+    if (child.stderr) {
+      child.stderr.on("data", (data) => {
+        stderr += data.toString();
+      });
+    }
+
     child.on("close", (code) => {
       if (code !== 0) {
+        spinner.fail("Failed to install dependencies.");
+        if (stderr) {
+          console.error(chalk.red(stderr));
+        }
         reject({ command: `${command} ${args.join(" ")}` });
         return;
       }
+      spinner.succeed("Dependencies installed.");
       resolve();
     });
   });

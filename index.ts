@@ -113,6 +113,10 @@ const packageManager = !!program.useNpm
     : getPkgManager();
 
 async function run(): Promise<void> {
+  console.log();
+  console.log(`  ${chalk.bgCyan.black.bold(" EventCatalog ")}  ${chalk.bold("Setup wizard")}`);
+  console.log();
+
   if (typeof projectPath === "string") {
     projectPath = projectPath.trim();
   }
@@ -121,7 +125,7 @@ async function run(): Promise<void> {
     const res = await prompts({
       type: "text",
       name: "path",
-      message: "What is your project named?",
+      message: "Where should we create your new project?",
       initial: "my-event-catalog",
       validate: (name) => {
         const validation = validateNpmName(path.basename(path.resolve(name)));
@@ -136,7 +140,7 @@ async function run(): Promise<void> {
       projectPath = res.path.trim();
     }
   }
-  
+
   if (!projectPath) {
     console.log(
       "\nPlease specify the project directory:\n" +
@@ -165,26 +169,7 @@ async function run(): Promise<void> {
     }
   }
 
-  // Ask if user wants an onboarding call
-  const onboardingRes = await prompts({
-    type: "confirm",
-    name: "wantsOnboarding",
-    message: "Would you like a free onboarding call to learn how EventCatalog can help your team?",
-    initial: false
-  });
-
-  if (onboardingRes.wantsOnboarding) {
-    console.log();
-    console.log(chalk.cyan("Great! You can schedule your free onboarding call here:"));
-    console.log(chalk.bold.underline("https://calendly.com/boyneyy123/eventcatalog-onboard-session"));
-    console.log();
-
-    await prompts({
-      type: "text",
-      name: "continue",
-      message: "Press Enter to continue with the installation..."
-    });
-  }
+  console.log();
 
   const template = program.template || "default";
 
@@ -214,7 +199,7 @@ async function run(): Promise<void> {
 
   const options = program.opts();
   const initEmptyProject = options.empty ?? false;
-  
+
 
   try {
     await createApp({
@@ -266,14 +251,14 @@ async function notifyUpdate(): Promise<void> {
     if (res?.latest) {
       const updateMessage =
         packageManager === "yarn"
-          ? "yarn global add create-cloud-catalog"
+          ? "yarn global add @eventcatalog/create-eventcatalog"
           : packageManager === "pnpm"
-            ? "pnpm add -g create-cloud-catalog"
-            : "npm i -g create-cloud-catalog";
+            ? "pnpm add -g @eventcatalog/create-eventcatalog"
+            : "npm i -g @eventcatalog/create-eventcatalog";
 
       console.log(
         chalk.yellow.bold(
-          "A new version of `create-cloud-catalog` is available!",
+          "A new version of `@eventcatalog/create-eventcatalog` is available!",
         ) +
           "\n" +
           "You can update by running: " +
