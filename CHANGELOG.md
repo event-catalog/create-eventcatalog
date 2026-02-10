@@ -1,5 +1,11 @@
 # @eventcatalog/create-catalog
 
+## 4.1.2
+
+### Patch Changes
+
+- 21b7e86: updated default catalog and added linter
+
 ## 4.1.1
 
 ### Patch Changes
