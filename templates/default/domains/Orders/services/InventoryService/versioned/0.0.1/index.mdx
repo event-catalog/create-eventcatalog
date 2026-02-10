@@ -31,11 +31,11 @@ receives:
           env: staging
 sends:
   - id: InventoryAdjusted
-    version: 0.0.4
+    version: 1.0.1
     to:
       - id: 'inventory.{env}.events'
   - id: OutOfStock
-    version: 0.0.3
+    version: 0.0.4
     to:
       - id: 'inventory.{env}.events'
 repository:

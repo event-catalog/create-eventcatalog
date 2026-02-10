@@ -46,6 +46,7 @@ export const installTemplate = async ({
       start: "eventcatalog start",
       preview: "eventcatalog preview",
       generate: "eventcatalog generate",
+      lint: "eventcatalog-linter",
       test: 'echo "Error: no test specified" && exit 1',
     }
   };
@@ -67,7 +68,8 @@ export const installTemplate = async ({
    */
   // const dependencies = ["@eventcatalog/eventcatalog-2"];
   const dependencies = [
-    "@eventcatalog/core"
+    "@eventcatalog/core",
+    "@eventcatalog/linter"
   ] as any;
 
   // if asyncapi is selected, add the asyncapi dependencies
